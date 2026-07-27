@@ -104,6 +104,7 @@ function Home() {
       <Hero />
       <About />
       <Products />
+      <Gallery />
       <WhyChooseUs />
       <Process />
       <Contact />
@@ -111,6 +112,9 @@ function Home() {
     </div>
   );
 }
+
+function GallerySection() { return null; }
+
 
 /* ---------- Header ---------- */
 const NAV = [
