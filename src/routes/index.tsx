@@ -113,7 +113,39 @@ function Home() {
   );
 }
 
-function GallerySection() { return null; }
+function Gallery() {
+  return (
+    <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+      <motion.div {...fadeUp} className="max-w-2xl">
+        <SectionEyebrow>Gallery</SectionEyebrow>
+        <h2 className="mt-3 font-display text-3xl font-semibold leading-tight tracking-tight md:text-4xl">
+          From farm to export — a closer look.
+        </h2>
+        <p className="mt-4 text-muted-foreground">
+          A glimpse of the cardamom and pepper we source, grade, and prepare for our clients worldwide.
+        </p>
+      </motion.div>
+      <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3">
+        {GALLERY.map((g, i) => (
+          <motion.div
+            key={g.url}
+            {...fadeUp}
+            transition={{ ...fadeUp.transition, delay: i * 0.05 }}
+            className="group overflow-hidden rounded-2xl shadow-[var(--shadow-card)] ring-1 ring-border/60"
+          >
+            <img
+              src={g.url}
+              alt={g.alt}
+              loading="lazy"
+              className="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 
 
 /* ---------- Header ---------- */
