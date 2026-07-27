@@ -18,15 +18,29 @@ import {
 } from "lucide-react";
 import { toast, Toaster } from "sonner";
 
-import heroAsset from "../assets/hero.jpg.asset.json";
-import cardamomAsset from "../assets/cardamom.jpg.asset.json";
-import pepperAsset from "../assets/pepper.jpg.asset.json";
 import logoAsset from "../assets/logo.jpg.asset.json";
+import img1 from "../assets/image.png.asset.json";
+import img2 from "../assets/image-2.png.asset.json";
+import img3 from "../assets/image-3.png.asset.json";
+import img4 from "../assets/image-4.png.asset.json";
+import img5 from "../assets/image-5.png.asset.json";
+import img6 from "../assets/image-6.png.asset.json";
+import img7 from "../assets/image-7.png.asset.json";
+import img8 from "../assets/image-8.png.asset.json";
 
-const heroImg = heroAsset.url;
-const cardamomImg = cardamomAsset.url;
-const pepperImg = pepperAsset.url;
+const heroImg = img5.url;
+const cardamomImg = img3.url;
+const pepperImg = img6.url;
 const logoImg = logoAsset.url;
+
+const GALLERY = [
+  { url: img7.url, alt: "Green cardamom pods on wooden spoon" },
+  { url: img1.url, alt: "Ground black pepper with peppercorns" },
+  { url: img8.url, alt: "Freshly harvested pepper berries" },
+  { url: img4.url, alt: "Cardamom tea with pods" },
+  { url: img2.url, alt: "Black pepper scoop on slate" },
+  { url: img5.url, alt: "Green cardamom with fresh leaves" },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -90,6 +104,7 @@ function Home() {
       <Hero />
       <About />
       <Products />
+      <Gallery />
       <WhyChooseUs />
       <Process />
       <Contact />
@@ -97,6 +112,41 @@ function Home() {
     </div>
   );
 }
+
+function Gallery() {
+  return (
+    <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+      <motion.div {...fadeUp} className="max-w-2xl">
+        <SectionEyebrow>Gallery</SectionEyebrow>
+        <h2 className="mt-3 font-display text-3xl font-semibold leading-tight tracking-tight md:text-4xl">
+          From farm to export — a closer look.
+        </h2>
+        <p className="mt-4 text-muted-foreground">
+          A glimpse of the cardamom and pepper we source, grade, and prepare for our clients worldwide.
+        </p>
+      </motion.div>
+      <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3">
+        {GALLERY.map((g, i) => (
+          <motion.div
+            key={g.url}
+            {...fadeUp}
+            transition={{ ...fadeUp.transition, delay: i * 0.05 }}
+            className="group overflow-hidden rounded-2xl shadow-[var(--shadow-card)] ring-1 ring-border/60"
+          >
+            <img
+              src={g.url}
+              alt={g.alt}
+              loading="lazy"
+              className="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+
 
 /* ---------- Header ---------- */
 const NAV = [
