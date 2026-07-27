@@ -556,19 +556,21 @@ function Contact() {
 
           <div className="mt-8 space-y-5">
             <ContactRow icon={MapPin} label="Address">
-              EcoBloom Exim Global<br />India
+              Building No. 562, Nettani<br />
+              Keezharoor P.O, Trivandrum<br />
+              Kerala, India
             </ContactRow>
             <ContactRow icon={Phone} label="Phone">
-              <a href="tel:+910000000000" className="hover:text-primary transition-colors">
-                +91 00000 00000
+              <a href="tel:+919243162100" className="hover:text-primary transition-colors">
+                +91 92431 62100
               </a>
             </ContactRow>
             <ContactRow icon={Mail} label="Email">
               <a
-                href="mailto:contact@ecobloomexim.com"
+                href="mailto:info@ecobloomeximglobal.com"
                 className="hover:text-primary transition-colors"
               >
-                contact@ecobloomexim.com
+                info@ecobloomeximglobal.com
               </a>
             </ContactRow>
           </div>
