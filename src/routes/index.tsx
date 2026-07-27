@@ -18,9 +18,13 @@ import {
 } from "lucide-react";
 import { toast, Toaster } from "sonner";
 
-import heroImg from "../assets/hero.jpg";
-import cardamomImg from "../assets/cardamom.jpg";
-import pepperImg from "../assets/pepper.jpg";
+import heroAsset from "../assets/hero.jpg.asset.json";
+import cardamomAsset from "../assets/cardamom.jpg.asset.json";
+import pepperAsset from "../assets/pepper.jpg.asset.json";
+
+const heroImg = heroAsset.url;
+const cardamomImg = cardamomAsset.url;
+const pepperImg = pepperAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -552,19 +556,21 @@ function Contact() {
 
           <div className="mt-8 space-y-5">
             <ContactRow icon={MapPin} label="Address">
-              EcoBloom Exim Global<br />India
+              Building No. 562, Nettani<br />
+              Keezharoor P.O, Trivandrum<br />
+              Kerala, India
             </ContactRow>
             <ContactRow icon={Phone} label="Phone">
-              <a href="tel:+910000000000" className="hover:text-primary transition-colors">
-                +91 00000 00000
+              <a href="tel:+919243162100" className="hover:text-primary transition-colors">
+                +91 92431 62100
               </a>
             </ContactRow>
             <ContactRow icon={Mail} label="Email">
               <a
-                href="mailto:contact@ecobloomexim.com"
+                href="mailto:info@ecobloomeximglobal.com"
                 className="hover:text-primary transition-colors"
               >
-                contact@ecobloomexim.com
+                info@ecobloomeximglobal.com
               </a>
             </ContactRow>
           </div>
@@ -735,11 +741,11 @@ function Footer() {
             <a href="#products">Black Pepper</a>
           </FooterCol>
           <FooterCol title="Contact">
-            <a href="mailto:contact@ecobloomexim.com">
-              contact@ecobloomexim.com
+            <a href="mailto:info@ecobloomeximglobal.com">
+              info@ecobloomeximglobal.com
             </a>
-            <a href="tel:+910000000000">+91 00000 00000</a>
-            <span>India</span>
+            <a href="tel:+919243162100">+91 92431 62100</a>
+            <span>Keezharoor, Trivandrum, Kerala</span>
           </FooterCol>
         </div>
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground md:flex-row md:items-center">
