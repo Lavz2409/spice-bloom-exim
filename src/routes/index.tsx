@@ -804,8 +804,7 @@ function Footer() {
         </div>
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground md:flex-row md:items-center">
           <p>
-            © {new Date().getFullYear()} EcoBloom Exim Global. All rights
-            reserved.
+            © 2026 EcoBloom Exim Global. All rights reserved.
           </p>
           <p>Premium Indian Spices · Green Cardamom · Black Pepper</p>
         </div>
