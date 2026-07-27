@@ -21,10 +21,12 @@ import { toast, Toaster } from "sonner";
 import heroAsset from "../assets/hero.jpg.asset.json";
 import cardamomAsset from "../assets/cardamom.jpg.asset.json";
 import pepperAsset from "../assets/pepper.jpg.asset.json";
+import logoAsset from "../assets/logo.jpg.asset.json";
 
 const heroImg = heroAsset.url;
 const cardamomImg = cardamomAsset.url;
 const pepperImg = pepperAsset.url;
+const logoImg = logoAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -107,10 +109,12 @@ const NAV = [
 
 function Logo() {
   return (
-    <a href="#top" className="flex items-center gap-2 group">
-      <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-[var(--shadow-card)] transition-transform group-hover:scale-105">
-        <Leaf className="h-5 w-5" />
-      </span>
+    <a href="#top" className="flex items-center gap-3 group">
+      <img
+        src={logoImg}
+        alt="EcoBloom Exim Global logo"
+        className="h-11 w-11 rounded-full object-cover shadow-[var(--shadow-card)] transition-transform group-hover:scale-105"
+      />
       <span className="flex flex-col leading-tight">
         <span className="font-display text-lg font-semibold tracking-tight text-primary">
           EcoBloom
