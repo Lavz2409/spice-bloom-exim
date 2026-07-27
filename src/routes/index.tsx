@@ -741,11 +741,11 @@ function Footer() {
             <a href="#products">Black Pepper</a>
           </FooterCol>
           <FooterCol title="Contact">
-            <a href="mailto:contact@ecobloomexim.com">
-              contact@ecobloomexim.com
+            <a href="mailto:info@ecobloomeximglobal.com">
+              info@ecobloomeximglobal.com
             </a>
-            <a href="tel:+910000000000">+91 00000 00000</a>
-            <span>India</span>
+            <a href="tel:+919243162100">+91 92431 62100</a>
+            <span>Keezharoor, Trivandrum, Kerala</span>
           </FooterCol>
         </div>
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground md:flex-row md:items-center">
