@@ -18,9 +18,13 @@ import {
 } from "lucide-react";
 import { toast, Toaster } from "sonner";
 
-import heroImg from "../assets/hero.jpg";
-import cardamomImg from "../assets/cardamom.jpg";
-import pepperImg from "../assets/pepper.jpg";
+import heroAsset from "../assets/hero.jpg.asset.json";
+import cardamomAsset from "../assets/cardamom.jpg.asset.json";
+import pepperAsset from "../assets/pepper.jpg.asset.json";
+
+const heroImg = heroAsset.url;
+const cardamomImg = cardamomAsset.url;
+const pepperImg = pepperAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
