@@ -615,9 +615,14 @@ function Contact() {
               Kerala, India
             </ContactRow>
             <ContactRow icon={Phone} label="Phone">
-              <a href="tel:+919243162100" className="hover:text-primary transition-colors">
-                +91 92431 62100
-              </a>
+              <div className="flex flex-col gap-1">
+                <a href="tel:+919243162100" className="hover:text-primary transition-colors">
+                  +91 92431 62100
+                </a>
+                <a href="tel:+918714732059" className="hover:text-primary transition-colors">
+                  +91 87147 32059
+                </a>
+              </div>
             </ContactRow>
             <ContactRow icon={Mail} label="Email">
               <a
@@ -799,6 +804,7 @@ function Footer() {
               info@ecobloomeximglobal.com
             </a>
             <a href="tel:+919243162100">+91 92431 62100</a>
+            <a href="tel:+918714732059">+91 87147 32059</a>
             <span>Keezharoor, Trivandrum, Kerala</span>
           </FooterCol>
         </div>
