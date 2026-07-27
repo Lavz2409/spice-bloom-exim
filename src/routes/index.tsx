@@ -18,15 +18,29 @@ import {
 } from "lucide-react";
 import { toast, Toaster } from "sonner";
 
-import heroAsset from "../assets/hero.jpg.asset.json";
-import cardamomAsset from "../assets/cardamom.jpg.asset.json";
-import pepperAsset from "../assets/pepper.jpg.asset.json";
 import logoAsset from "../assets/logo.jpg.asset.json";
+import img1 from "../assets/image.png.asset.json";
+import img2 from "../assets/image-2.png.asset.json";
+import img3 from "../assets/image-3.png.asset.json";
+import img4 from "../assets/image-4.png.asset.json";
+import img5 from "../assets/image-5.png.asset.json";
+import img6 from "../assets/image-6.png.asset.json";
+import img7 from "../assets/image-7.png.asset.json";
+import img8 from "../assets/image-8.png.asset.json";
 
-const heroImg = heroAsset.url;
-const cardamomImg = cardamomAsset.url;
-const pepperImg = pepperAsset.url;
+const heroImg = img5.url;
+const cardamomImg = img3.url;
+const pepperImg = img6.url;
 const logoImg = logoAsset.url;
+
+const GALLERY = [
+  { url: img7.url, alt: "Green cardamom pods on wooden spoon" },
+  { url: img1.url, alt: "Ground black pepper with peppercorns" },
+  { url: img8.url, alt: "Freshly harvested pepper berries" },
+  { url: img4.url, alt: "Cardamom tea with pods" },
+  { url: img2.url, alt: "Black pepper scoop on slate" },
+  { url: img5.url, alt: "Green cardamom with fresh leaves" },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
