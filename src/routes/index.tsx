@@ -18,28 +18,18 @@ import {
 } from "lucide-react";
 import { toast, Toaster } from "sonner";
 
-import logoAsset from "../../public/images/logo.jpg.asset.json";
-import img1 from "../../public/images/image.png.asset.json";
-import img2 from "../../public/images/image-2.png.asset.json";
-import img3 from "../../public/images/image-3.png.asset.json";
-import img4 from "../../public/images/image-4.png.asset.json";
-import img5 from "../../public/images/image-5.png.asset.json";
-import img6 from "../../public/images/image-6.png.asset.json";
-import img7 from "../../public/images/image-7.png.asset.json";
-import img8 from "../../public/images/image-8.png.asset.json";
-
-const heroImg = img5.url;
-const cardamomImg = img3.url;
-const pepperImg = img6.url;
-const logoImg = logoAsset.url;
+const logoImg = "/images/logo.jpg";
+const heroImg = "/images/image-5.png";
+const cardamomImg = "/images/image-3.png";
+const pepperImg = "/images/image-6.png";
 
 const GALLERY = [
-  { url: img7.url, alt: "Green cardamom pods on wooden spoon" },
-  { url: img1.url, alt: "Ground black pepper with peppercorns" },
-  { url: img8.url, alt: "Freshly harvested pepper berries" },
-  { url: img4.url, alt: "Cardamom tea with pods" },
-  { url: img2.url, alt: "Black pepper scoop on slate" },
-  { url: img5.url, alt: "Green cardamom with fresh leaves" },
+  { url: "/images/image-7.png", alt: "Green cardamom pods on wooden spoon" },
+  { url: "/images/image.png", alt: "Ground black pepper with peppercorns" },
+  { url: "/images/image-8.png", alt: "Freshly harvested pepper berries" },
+  { url: "/images/image-4.png", alt: "Cardamom tea with pods" },
+  { url: "/images/image-2.png", alt: "Black pepper scoop on slate" },
+  { url: "/images/image-5.png", alt: "Green cardamom with fresh leaves" },
 ];
 
 export const Route = createFileRoute("/")({
