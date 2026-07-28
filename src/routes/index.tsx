@@ -18,15 +18,15 @@ import {
 } from "lucide-react";
 import { toast, Toaster } from "sonner";
 
-import logoAsset from "../assets/logo.jpg.asset.json";
-import img1 from "../assets/image.png.asset.json";
-import img2 from "../assets/image-2.png.asset.json";
-import img3 from "../assets/image-3.png.asset.json";
-import img4 from "../assets/image-4.png.asset.json";
-import img5 from "../assets/image-5.png.asset.json";
-import img6 from "../assets/image-6.png.asset.json";
-import img7 from "../assets/image-7.png.asset.json";
-import img8 from "../assets/image-8.png.asset.json";
+import logoAsset from "../../public/images/logo.jpg.asset.json";
+import img1 from "../../public/images/image.png.asset.json";
+import img2 from "../../public/images/image-2.png.asset.json";
+import img3 from "../../public/images/image-3.png.asset.json";
+import img4 from "../../public/images/image-4.png.asset.json";
+import img5 from "../../public/images/image-5.png.asset.json";
+import img6 from "../../public/images/image-6.png.asset.json";
+import img7 from "../../public/images/image-7.png.asset.json";
+import img8 from "../../public/images/image-8.png.asset.json";
 
 const heroImg = img5.url;
 const cardamomImg = img3.url;
