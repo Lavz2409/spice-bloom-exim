@@ -32,36 +32,40 @@ const GALLERY = [
   { url: "/images/image-5.png", alt: "Green cardamom with fresh leaves" },
 ];
 
+const SITE_URL = "https://ecobloomeximglobal.org";
+const OG_IMAGE = `${SITE_URL}/images/image-5.png`;
+const PAGE_TITLE =
+  "EcoBloom Exim Global — Premium Green Cardamom & Black Pepper Exporter from India";
+const PAGE_DESC =
+  "EcoBloom Exim Global is an Indian exporter of premium Green Cardamom and Black Pepper — carefully sourced from Kerala, graded to export standards, and reliably delivered worldwide.";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      {
-        title:
-          "EcoBloom Exim Global — Premium Green Cardamom & Black Pepper Exporter from India",
-      },
-      {
-        name: "description",
-        content:
-          "EcoBloom Exim Global is an Indian export business specializing in premium Green Cardamom and Black Pepper. Export-quality spices, carefully sourced and reliably delivered.",
-      },
+      { title: PAGE_TITLE },
+      { name: "description", content: PAGE_DESC },
       {
         name: "keywords",
         content:
-          "Green Cardamom Exporter, Black Pepper Exporter, Indian Spices Export, Premium Cardamom Supplier, Black Pepper Supplier, Export Quality Spices, Indian Spice Export Company",
+          "Green Cardamom Exporter, Black Pepper Exporter, Indian Spices Export, Premium Cardamom Supplier, Black Pepper Supplier, Export Quality Spices, Kerala Spice Exporter",
       },
-      {
-        property: "og:title",
-        content:
-          "EcoBloom Exim Global — Premium Green Cardamom & Black Pepper Exporter",
-      },
-      {
-        property: "og:description",
-        content:
-          "Premium Indian Green Cardamom and Black Pepper, carefully sourced and export-ready.",
-      },
-      { property: "og:url", content: "/" },
+      { name: "robots", content: "index, follow" },
+      { name: "author", content: "EcoBloom Exim Global" },
+      { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "EcoBloom Exim Global" },
+      { property: "og:title", content: PAGE_TITLE },
+      { property: "og:description", content: PAGE_DESC },
+      { property: "og:url", content: SITE_URL + "/" },
+      { property: "og:image", content: OG_IMAGE },
+      { property: "og:image:alt", content: "Premium green cardamom pods with fresh leaves" },
+      { property: "og:locale", content: "en_IN" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: PAGE_TITLE },
+      { name: "twitter:description", content: PAGE_DESC },
+      { name: "twitter:image", content: OG_IMAGE },
+      { name: "twitter:image:alt", content: "Premium green cardamom pods with fresh leaves" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: SITE_URL + "/" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -69,9 +73,57 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "EcoBloom Exim Global",
+          url: SITE_URL,
+          logo: `${SITE_URL}/images/logo.jpg`,
+          image: OG_IMAGE,
           description:
-            "Indian export business specializing in premium Green Cardamom and Black Pepper.",
-          address: { "@type": "PostalAddress", addressCountry: "IN" },
+            "Indian exporter specializing in premium Green Cardamom and Black Pepper.",
+          email: "info@ecobloomeximglobal.com",
+          telephone: ["+91-92431-62100", "+91-87147-32059"],
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Building No. 562, Nettani",
+            addressLocality: "Keezharoor P.O, Trivandrum",
+            addressRegion: "Kerala",
+            addressCountry: "IN",
+          },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "EcoBloom Exim Global",
+          url: SITE_URL,
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Product",
+              name: "Premium Green Cardamom",
+              image: `${SITE_URL}/images/image-3.png`,
+              description:
+                "Export-grade Indian Green Cardamom (Elettaria cardamomum) — bold pods, high oil content, and rich aroma sourced from Kerala.",
+              brand: { "@type": "Brand", name: "EcoBloom Exim Global" },
+              category: "Spices",
+              countryOfOrigin: "IN",
+            },
+            {
+              "@type": "Product",
+              name: "Premium Black Pepper",
+              image: `${SITE_URL}/images/image-6.png`,
+              description:
+                "Export-grade Indian Black Pepper (Piper nigrum) — sun-dried whole peppercorns with sharp aroma and consistent grade.",
+              brand: { "@type": "Brand", name: "EcoBloom Exim Global" },
+              category: "Spices",
+              countryOfOrigin: "IN",
+            },
+          ],
         }),
       },
     ],
