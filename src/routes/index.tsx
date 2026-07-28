@@ -676,7 +676,7 @@ function ContactRow({
         <p className="text-xs uppercase tracking-wider text-muted-foreground">
           {label}
         </p>
-        <p className="mt-1 text-sm text-foreground">{children}</p>
+        <div className="mt-1 text-sm text-foreground">{children}</div>
       </div>
     </div>
   );
